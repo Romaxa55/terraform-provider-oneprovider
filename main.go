@@ -6,10 +6,10 @@ package main
 import (
 	"context"
 	"flag"
+	"github.com/Romaxa55/terraform-provider-oneprovider/oneprovider"
 	"log"
 
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
-	"github.com/hashicorp/terraform-provider-scaffolding-framework/internal/provider"
 )
 
 // Run "go generate" to format example terraform files and generate the docs for the registry/website
@@ -43,7 +43,7 @@ func main() {
 		Debug:   debug,
 	}
 
-	err := providerserver.Serve(context.Background(), provider.New(version), opts)
+	err := providerserver.Serve(context.Background(), oneprovider.New(version), opts)
 
 	if err != nil {
 		log.Fatal(err.Error())
