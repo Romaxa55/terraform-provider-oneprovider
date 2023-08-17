@@ -1,4 +1,4 @@
-module github.com/hashicorp/terraform-provider-scaffolding-framework
+module github.com/Romaxa55/terraform-provider-oneprovider
 
 go 1.19
 
